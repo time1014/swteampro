@@ -1,0 +1,1082 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Single+Day&display=swap');
+
+@font-face {
+  font-family: 'YEONGJUSeonbiTTF';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/YEONGJUSeonbiTTF.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 120px;
+  background-color: white;
+  width: 100%;
+}
+
+.logoContainer {
+  width: 120px;
+  height: 100%;
+  padding: 0 10px;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contentContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* 흰색 배너와 이미지/입력칸 사이의 간격 조정 */
+}
+
+.imageContainer {
+  width: 550px; /* 이미지가 들어갈 공간의 너비 */
+  height: 450px; /* 이미지가 들어갈 공간의 높이 */
+  background-color: #333; /* 이미지를 표시할 공간의 배경색 */
+  margin-bottom: 20px; /* 이미지와 입력칸 사이의 간격 조정 */
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.inputContainer {
+  width: 550px;
+  height: 80px;
+  background-color: #cfd2d4;
+  margin: 2 auto;
+  position: relative;
+  z-index: 10; /* 버튼의 z-index를 높게 설정 */
+}
+
+.inputField {
+  width: calc(100% - 20px);
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 25px;
+}
+
+.inputField::placeholder {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+
+/* resultStyles.css */
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+.resultContainer2 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+
+.itemContainer {
+  display: flex; /* 가로로 배치 */
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+
+}
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto; /* 왼쪽 마진을 자동으로 조절 */
+  margin-right: auto; /* 오른쪽 마진을 자동으로 조절 */
+  font-family: 'YangjuByeolsanA1';
+}
+
+.itemImage {
+  width: 100%; /* 부모 요소에 대한 상대적인 너비로 설정 */
+  height: auto; /* 높이는 자동으로 조정되도록 설정 */
+  object-fit: contain; /* 이미지가 부모 요소에 맞게 조정되면서 비율 유지 */
+}
+
+.upload-btn {
+  font-size: 32pt;
+  padding: 12px 0; /* 가로 패딩을 0으로 설정하여 테두리에 꽉 차게 함 */
+  margin-top: 20px;
+  background-color: #3496ecbf;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* 버튼의 너비를 100%로 설정하여 테두리에 꽉 차게 함 */
+  font-family: 'YangjuByeolsanA1';
+
+  
+}
+
+
+#start-btn{
+  font-size: 10pt;
+  padding: 12px 24px;
+  background-color: #004cff;
+  color: white;
+  margin-left:10px;
+  border: none;
+}
+
+
+.itemtitle {
+  margin-bottom: 10px; /* 버튼과의 간격 조정 */
+}
+
+
+.winningContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%; /* 예시: 원하는 만큼의 여백을 위쪽으로 추가 */
+}
+
+.winningText {
+  font-size: 28px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  z-index: 1;
+}
+
+#winnertext{
+  color: white;
+}
+
+.resultContentContainer {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.resultImageContainer {
+  width: auto; /* 반응형을 위해 가로 길이는 자동으로 설정 */
+  height: 500px; /* 높이를 500px로 설정하여 비율 유지 */
+  max-width: 700px; /* 최대 너비를 700px로 설정하여 너무 커지지 않도록 함 */
+  max-height: 500px; /* 최대 높이를 500px로 설정하여 너무 커지지 않도록 함 */
+  background-color: #333; /* 배경 색상을 #333으로 설정 */
+  margin-top: 12%; /* 위쪽 여백을 10%로 설정 */
+  position: relative; /* 상대 위치 설정 */
+  left: 30%; /* 왼쪽에서 30% 지점으로 이동 */
+  transform: translateX(-50%); /* 수평으로 가운데 정렬 */
+  display: flex; /* flexbox를 사용하여 자식 요소를 정렬 */
+  align-items: center; /* 자식 요소를 수직으로 가운데 정렬 */
+  justify-content: center; /* 자식 요소를 수평으로 가운데 정렬 */
+}
+
+.resultImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* subpage.css */
+.roundContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px; /* 이미지가 들어갈 공간의 높이 */
+}
+
+.roundText {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 36px; 
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5); 
+  padding: 20px; 
+  z-index: 1; 
+}
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: black;
+  width: 100%;
+}
+
+.selectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.selectImageContainer {
+  width: 600px; /* 이미지가 들어갈 공간의 너비 */
+  height: 600px; /* 이미지가 들어갈 공간의 높이 */
+  background-color: #333; /* 이미지를 표시할 공간의 배경색 */
+  margin: 0 100px; /* 이미지 간의 간격 설정 */
+}
+
+.selectContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 수직 가운데 정렬 */
+  margin-top: 20px; /* 위쪽 여백 추가 */
+}
+
+.selectImageWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+#vsitem{
+  color: white;
+}
+
+.title{
+  font-size: 47pt;
+  color: white;
+}
+
+#itemtitle{
+  color: white;
+  font-size: 32pt;
+}
+
+#worldcuptitle {
+  color: white;
+  font-family: 'YangjuByeolsanA1';
+}
+
+
+/* App.css */
+.largeButton {
+  font-size: 20pt; /* 버튼의 글자 크기 */
+  padding: 10px 20px; /* 버튼의 여백 */
+  
+}
+
+/*mainpage*/
+#create-btn {
+  font-size: 20pt;
+  width: 240px;
+  height: 80px;
+  padding: 12px 24px;
+  background-color: #263883;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+#loadingmessage {
+  color: rgb(0, 0, 0);
+  font-size: 15pt;
+  text-align: center;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.guideMark {
+  position: absolute;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 35pt;
+  margin-left: calc(550px + 20px);
+  color: rgb(255, 255, 255);
+}
+
+.jb-text {
+  opacity: 0;
+  border-radius: 2%;
+  height: auto;
+  overflow: hidden;
+  transition: opacity 0.5s, height 0.5s;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: #aaaaaa;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* 낮은 z-index 설정 */
+  pointer-events: none; /* 클릭 불가능하게 설정 */
+}
+
+.guideMark:hover + .jb-text {
+  opacity: 1; /* 호버시 투명도를 1로 변경하여 서서히 나타나게 함 */
+  height: auto; /* 내용에 따라 높이가 자동으로 조절되도록 설정 */
+}
+
+#text-title{
+  text-align: center;                                          
+  font-size: 35pt;
+  color: black;
+}
+
+#guide-text{
+  font-size: 18pt;
+}
+
+
+#randomkeyword2 {
+  color: rgb(0, 0, 0);
+}
+
+#randomkeyword {
+  color: rgb(255, 255, 255);
+}
+
+.itemImage.enlarged {
+  transform: scale(1.1);
+  transition: transform 1s ease;
+}
+
+/* 메인페이지 로딩 랜덤메세지 효과 추가 부분입니다. */
+.loadingMessage {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.loadingMessage.show {
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 추천키워드 디자인 수정 부분 */
+.recommendedKeywords {
+  margin-top: 150px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recommendedKeywords ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20;
+  display: flex;
+  justify-content: center;
+}
+
+.recommendedKeywords ul li {
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 8px 12px;
+  background-color: #7972cba6;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.recommendedKeywords ul li:hover {
+  background-color: rgb(255, 142, 160);
+}
+
+
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.closeButton3 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1001;
+  font-size: 50px;
+}
+
+
+.modalContent button {
+  font-size: 20pt;
+  margin-top: auto;
+  background-color: #3f34ba;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modalContent h2,
+.modalContent select,
+.modalContent button {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+
+/* 선택창 몇강인지 넘어갈때 알림 추가 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(128, 128, 128, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 40px;
+  width: 700px;
+  height: 300px;
+  max-width: none;
+  max-height: none;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modalText {
+  font-size: 40pt;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/*5월10일 닫기 위치 수정*/
+.closeButton {
+  align-self: center;
+  width: 150px;
+  height: 50px;
+  margin-top: 240px;
+  margin-right: 300px;
+}
+
+.totalbtn{
+  font-size: 24px; /* 버튼의 글자 크기 */
+  padding: 10px 20px; /* 버튼의 여백 */
+}
+
+.total{
+  font-size: 50pt;
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.total1{
+  font-size: 30pt;
+}
+
+
+@keyframes slideDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-100%); /* Initially positioned above */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* Slide down to the center */
+  }
+}
+
+#trophy {
+  font-size: 30pt; /* 아이콘 크기 */
+}
+
+#winnertotaltitle{
+  font-size: 30pt;
+}
+
+.statisticsContent {
+  position: "relative";
+  float: "left"; 
+  margin-right: "20px";
+  border: 2px;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 20pt;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 37%;
+  height: 290px;
+  position: fixed;
+  bottom: 100px;
+  right: 5%;
+}
+
+.statisticsContent p {
+  margin-right: 330px;
+  font-size: 30pt;
+  font-weight: bold;
+}
+
+.show {
+  opacity: 1; /* 투명도를 1로 설정하여 나타나도록 함 */
+  transform: translateY(0); /* translateY를 0으로 설정하여 아래로 이동하도록 함 */
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 3rem;
+  color: #fff;
+}
+
+
+.plusinformation {
+  background-color: #ffffff;
+  font-size: 1.4vw;
+  border: 2px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  width: 37%;
+  overflow-x: auto;
+  height:180px; /* 예시로 800px로 수정 */
+  margin-top: 5%;
+  margin-left: 5%;
+  position: absolute;
+  top: 7%;
+  right: 5%;
+}
+
+.itemContent {
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  padding: 20px;
+}
+
+.vs {
+  color: white; 
+  font-size: 60px; 
+  font-family: 'YangjuByeolsanA1';
+}
+
+.resultbtns {
+  position: absolute;
+  z-index: 3;
+  margin: 0 0 0 45%;
+  bottom: 0;
+
+}
+
+.selectinfo {
+  font-size: 20pt;
+  width: 100%;
+}
+
+.itemContainer {
+  display: flex; /* 가로로 배치 */
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto; /* 왼쪽 마진을 자동으로 조절 */
+  margin-right: auto; /* 오른쪽 마진을 자동으로 조절 */
+  font-family: 'YangjuByeolsanA1';
+}
+
+.itemImage {
+  width: 100%; /* 부모 요소에 대한 상대적인 너비로 설정 */
+  height: auto; /* 높이는 자동으로 조정되도록 설정 */
+  object-fit: contain; /* 이미지가 부모 요소에 맞게 조정되면서 비율 유지 */
+}
+
+/* 메인페이지 */
+/* PC 화면 */
+@media screen and (min-width: 1024px) {
+  .contentContainer {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+  }
+}
+
+/* 태블릿 화면 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .imageContainer {
+    width: 400px;
+    height: 300px;
+  }
+
+  .inputContainer {
+    width: 400px;
+  }
+
+  #create-btn {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .recommendedKeywords {
+    margin-top: 150px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .guideMark {
+    margin-left: calc(400px + 10px);
+  }
+}
+
+/* 모바일 화면 */
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 35px;
+  }
+
+  .logoContainer {
+    width: 3000px;
+  }
+
+  .imageContainer,
+  .inputContainer {
+    width: 100%;
+  }
+
+  #create-btn {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .recommendedKeywords {
+    margin-top: 150px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .recommendedKeywords ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 요소들이 가로로 나열되다가 공간이 부족하면 아래 줄로 이동하도록 설정 */
+  }
+  
+  .recommendedKeywords ul li {
+    margin-right: 10px;
+    margin-bottom: 10px; /* 요소들 간의 간격을 조절 */
+    cursor: pointer;
+    padding: 8px 12px;
+    background-color: #7972cba6;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .guideMark {
+    margin-left: calc(100% - 5px); /* 가이드 마크의 가운데 정렬 */
+    top: 10%; /* 입력 컨테이너 위에 위치 */
+    z-index: 999; /* 다른 요소 위에 표시되도록 z-index 설정 */
+    
+  }
+
+  #guide-text {
+    font-size: 12pt;
+  }
+
+}
+
+/* PC 화면 */
+@media screen and (min-width: 1200px) {
+  .itemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black; /* 배경색 지정 */
+    padding: 20px; /* 내부 여백 추가 */
+  }
+
+  .itemContent {
+    max-width: 600px;
+  }
+
+  .itemImage {
+    width: 600px; /* 이미지 너비를 부모 요소의 너비에 맞게 설정 */
+    height: 400px; /* 이미지 높이 고정 */
+    object-fit: contain; /* 이미지가 부모 요소에 맞게 조정되면서 비율 유지 */
+  }
+}
+
+/* 태블릿 화면 */
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  .itemContainer {
+    max-width: calc(100% - 40px); /* 화면 너비에서 여유 공간을 제외한 값으로 최대 너비 설정 */
+    margin: 0 20px; /* 좌우 여백 추가 */
+  }
+
+  .itemContent {
+    max-width: 600px; /* 컨테이너의 너비에 맞게 설정 */
+  }
+
+  .itemImage {
+    width: 300px; /* 이미지 너비를 부모 요소의 너비에 맞게 설정 */
+    height: 400px; /* 이미지 높이 고정 */
+    object-fit: contain; /* 이미지가 부모 요소에 맞게 조정되면서 비율 유지 */
+  }
+
+  #itemtitle {
+    color: white;
+    font-size: 15pt;
+    overflow-wrap: break-word; /* 글자가 너무 길어질 때 단어를 나누고 줄바꿈 처리 */
+  }
+  .content {
+    width: 700px;
+    height: 300px;
+    padding: 20px;
+  }
+
+  .modalText {
+    font-size: 35pt;
+    margin-top: 40px;
+  }
+
+  .closeButton {
+    align-self: center;
+    width: 150px;
+    height: 50px;
+    margin-top: 240px;
+    margin-right: 300px;
+    font-size: 35pt;
+  }
+
+}
+
+/* 모바일 화면 */
+@media screen and (max-width: 800px) {
+  .itemContainer {
+    max-width: calc(100% - 40px); /* 화면 너비에서 여유 공간을 제외한 값으로 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+    display: flex; /* 세로 방향으로 정렬하기 위해 flex 사용 */
+    flex-direction: column; /* 아이템을 세로로 배치 */
+    align-items: center; /* 세로로 가운데 정렬 */
+    background-color: black; /* 배경색 지정 */
+    padding: 20px; /* 내부 여백 추가 */
+  }
+
+  .itemContent {
+    max-width: 600px; /* 컨테이너의 너비에 맞게 설정 */
+    text-align: center;
+  }
+
+  .itemImage {
+    width: 100%;
+    height: auto; /* 자동으로 높이를 조정하여 비율 유지 */
+  }
+
+  #itemtitle {
+    color: white;
+    font-size: 10pt;
+    margin-top: 10px; /* 제목과 이미지 사이 간격 조정 */
+    overflow-wrap: break-word; /* 글자가 너무 길어질 때 단어를 나누고 줄바꿈 처리 */
+  }
+  .content {
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+  }
+
+  .modalText {
+    font-size: 35pt;
+    margin-top: 40px;
+  }
+
+  .closeButton {
+    position: fixed; /* 화면에 고정 위치 */
+    bottom: 20px; /* 화면 하단으로부터의 간격 */
+    left: 50%; /* 가로 가운데 정렬을 위해 왼쪽 여백을 50%로 설정 */
+    transform: translateX(-50%); /* 가로 방향으로 자신의 절반 크기만큼 이동하여 중앙 정렬 */
+    width: 150px;
+    height: 50px;
+    font-size: 35pt;
+  }
+}
+
+/*result */
+@media screen and (min-width: 1651){
+  
+ 
+  .plusinformation {
+    width: 600px;
+    margin-top: 5%;
+    margin-left: 5%;
+    padding: 3%; /* 여백을 좀 줄여서 길이를 더 많이 보이도록 */
+    font-size: 1.4vw;  }
+
+  .statisticsContent {
+    width: 600px;
+    height: 305px;
+    bottom: 100px;
+    right: 5%;
+    position: fixed;
+  }
+  #qq{
+    margin: 0 0 0 0px;
+  }
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1650px){
+  .resultImageContainer {
+    width: 45%;
+    margin-top: 16%;
+
+  }
+
+  .largerFont {
+    font-size: 1.5vw; /* 또는 다른 원하는 크기로 조정 */
+} 
+
+
+  .plusinformation {
+    width: 30%;
+    font-size: 1.4vw;
+    top: 8%;
+
+  }
+
+  .statisticsContent {
+    width: 30%;
+    height: 305px;
+    bottom: 100px;
+    position: fixed;
+    
+  }
+  #qq{
+    margin: 0 0 0 -100px;
+  }
+  
+  
+}
+
+/* 태블릿 화면 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #qq{
+    margin: 0 0 0 0px;
+  }
+  /* 기존의 다른 스타일 */
+  .resultContentContainer {
+    max-width: 400px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+
+.largerFont {
+  font-size: 3vw; /* 또는 다른 원하는 크기로 조정 */
+} 
+
+.resultContainer2 {
+  display: flex;
+  flex-direction: column;
+  height: 160vh;
+  background-color: black;
+  overflow: hidden;
+}
+.resultImageContainer {
+  width: 80%;
+  height: 340px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plusinformation {
+  width: 80%;
+  height: 340px;
+  overflow-y: auto; /* 스크롤바 추가 */
+  position: absolute;
+  top: 85%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 20px; /* 텍스트 크기 조정 */
+  padding: 10px; /* 내부 여백 추가 */
+}
+
+.statisticsContent {
+  width: 80%;
+  height: 340px;
+  overflow-y: auto; /* 스크롤바 추가 */
+  position: absolute;
+  top: 128%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px; /* 텍스트 크기 조정 */
+  padding: 10px; /* 내부 여백 추가 */
+}
+.resultbtns {
+  top:1430px;
+  margin: 0 0 0 40%;
+
+}
+
+
+}
+
+/* 모바일 화면 */
+@media screen and (max-width: 767px) {
+  .resultbtns {
+    top:1500px;
+    margin: 0 0 0 35%;
+  
+  }
+  .largerFont {
+    font-size: 3vw; /* 또는 다른 원하는 크기로 조정 */
+  } 
+  
+  
+.resultContainer2 {
+  display: flex;
+  flex-direction: column;
+  height: 170vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+  /* 기존의 다른 스타일 */
+  .resultContentContainer {
+    max-width: 400px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.resultImageContainer {
+  width: 80%;
+  height: 380px;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plusinformation {
+  width: 80%;
+  height: 400px;
+  overflow-y: auto; /* 스크롤바 추가 */
+  position: absolute;
+  top: 90%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 20px; /* 텍스트 크기 조정 */
+  padding: 10px; /* 내부 여백 추가 */
+}
+
+.statisticsContent {
+  width: 80%;
+  height: 350px;
+  overflow-y: auto; /* 스크롤바 추가 */
+  position: absolute;
+  top: 135%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px; /* 텍스트 크기 조정 */
+  padding: 10px; /* 내부 여백 추가 */
+}
+}
